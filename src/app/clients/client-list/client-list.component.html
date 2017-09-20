@@ -1,0 +1,47 @@
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="side" opened="false">
+    <table>
+      <tr>
+        <td>
+          <md-icon id="leftnav" (click)="sidenav.toggle()" (click)="changeShowStatus()">menu</md-icon>
+        </td>
+
+      </tr>
+    </table>
+
+    <div class="left-side-content">
+      <p class="filter">Filtering</p>
+
+      <div>
+        <input class="form-field-full-width" mdInput placeholder="First Name" [(ngModel)]="filter.firstName" value="">
+      </div>
+      
+
+    </div>
+  </md-sidenav>
+  <table>
+    <tr>
+      <td>
+        <md-icon *ngIf="showHide" (click)="sidenav.toggle()" (click)="changeShowStatus()">menu</md-icon>
+      </td>
+    </tr>
+  </table>
+  <div class="right-side-content">
+    <md-grid-list class="grid-list" cols="4">
+      <md-grid-tile class="grid-tile" *ngFor="let client of clients" [colspan]="1" [rowspan]="1" [style.background]="lightblue">
+        <div class="client-card">
+
+          <div class="client-card-title capitalize">{{client.name.first}} {{client.name.last}}</div>
+
+          <img class="client-image" (click)="goDetails(client)" src="{{client.picture.large}}" alt="Photo of a {{client.name.first}} {{client.name.last}}">
+          <p class="client-card-content capitalize">{{client.location.state}} - {{client.nat}} </p>
+
+          <div class="client-card-actions">
+            <a md-raised-button (click)="goDetails(client)">Details</a>
+          </div>
+        </div>
+
+      </md-grid-tile>
+    </md-grid-list>
+  </div>
+</md-sidenav-container>

@@ -1,0 +1,66 @@
+
+.grid-list{
+    
+     height: 100%;
+     vertical-align: top;
+     
+     max-width: 300px;
+     margin: auto;
+   }
+   .client-card-tile{
+     text-align: center;
+     height: 100%;
+     vertical-align: top;
+   
+     
+   }
+     .client-card {
+       border: 0px solid black;
+       width: 80%;
+       height: 80%;
+       display: inline-block;
+       vertical-align: top;
+       text-align: center;
+     }
+     
+   
+   .client-card-title {
+     vertical-align: top;
+     text-align: center;
+     font-family: Arial;
+     font-weight: bold;
+     font-size: 20px; 
+     margin: auto;
+   }
+   
+   .client-image {
+   
+     text-align: center;
+     margin: auto;
+     width: 65%;
+     height: 55%;
+     
+   }
+   
+   
+   
+     .example-headers-align .mat-expansion-panel-header-title, 
+     .example-headers-align .mat-expansion-panel-header-description {
+       flex-basis: 0;
+     }
+     
+     .example-headers-align .mat-expansion-panel-header-description {
+       justify-content: space-between;
+       align-items: center;
+     }
+     .expansion-table-td {
+       font-family: Arial;
+       font-weight: bold;
+     }
+   
+     .center {
+       text-align: center;
+     }
+     .capitalize {
+       text-transform: capitalize;
+     }

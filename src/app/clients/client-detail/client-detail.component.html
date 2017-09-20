@@ -1,0 +1,131 @@
+
+    <div class="grid-list" *ngIf="client$ | async as client; else elseBlock">
+      
+              <div class="client-card-tile">
+                <div class="client-card">
+      
+                    <div class="client-card-title capitalize">{{client.name.first}} {{client.name.last}}</div>
+                
+                  <img class="client-image" md-card-image src="{{client.picture.large}}" alt="Photo of a {{client.name.first}} {{client.name.last}}">
+                </div>
+              </div>
+              <div class="grid-tile">
+                <md-accordion class="example-headers-align">
+                  <md-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+                    <md-expansion-panel-header>
+                      <md-panel-title>
+                        <table>
+                          <tr>
+                            <td>
+                              <md-icon>account_circle</md-icon>
+                            </td>
+                            <td>Personal Info </td>
+                          </tr>
+                        </table>
+                      </md-panel-title>
+                    </md-expansion-panel-header>
+                    <table>
+                      <tr>
+                        <td class="expansion-table-td">Date Of Birth</td>
+                        <td>:</td>
+                        <td>{{client.dob | date}}</td>
+                      </tr>
+                      <tr>
+                        <td class="expansion-table-td">Gender</td>
+                        <td>:</td>
+                        <td class="capitalize"> {{client.gender}}</td>
+                      </tr>
+                    </table>
+      
+                    <md-action-row>
+                      <button md-button color="primary" (click)="nextStep()">Next</button>
+                    </md-action-row>
+                  </md-expansion-panel>
+      
+                  <md-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+                    <md-expansion-panel-header>
+                      <md-panel-title>
+                        <table>
+                          <tr>
+                            <td>
+                              <md-icon>phone</md-icon>
+                            </td>
+                            <td>Contact Details</td>
+                          </tr>
+                        </table>
+                      </md-panel-title>
+                    </md-expansion-panel-header>
+      
+                    <table>
+                      <tr>
+                        <td class="expansion-table-td">Email</td>
+                        <td>:</td>
+                        <td>{{client.email}}</td>
+                      </tr>
+                      <tr>
+                        <td class="expansion-table-td">Phone</td>
+                        <td>:</td>
+                        <td>{{client.phone}}</td>
+                      </tr>
+                    </table>
+      
+                    <md-action-row>
+                      <button md-button color="warn" (click)="prevStep()">Previous</button>
+                      <button md-button color="primary" (click)="nextStep()">Next</button>
+                    </md-action-row>
+                  </md-expansion-panel>
+      
+                  <md-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+                    <md-expansion-panel-header>
+                      <md-panel-title>
+                        <table>
+                          <tr>
+                            <td>
+                              <md-icon>home</md-icon>
+                            </td>
+                            <td>Address</td>
+                          </tr>
+                        </table>
+                      </md-panel-title>
+                    </md-expansion-panel-header>
+                    <table>
+                      <tr>
+                        <td class="capitalize" colspan="2">{{client.location.street}}</td>
+                      </tr>
+                      <tr>
+                        <td class="capitalize">{{client.location.city}} - {{client.location.state}}</td>
+                        <td> {{client.location.postcode}}</td>
+                      </tr>
+                    </table>
+                    <md-action-row>
+                      <button md-button color="warn" (click)="prevStep()">Previous</button>
+                      <button md-button color="primary" (click)="nextStep()">Next</button>
+                    </md-action-row>
+                  </md-expansion-panel>
+                  <md-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle="true">
+                    <md-expansion-panel-header>
+                      <md-panel-title>
+                        <table>
+                          <tr>
+                            <td>
+                              <md-icon>backspace</md-icon>
+                            </td>
+                            <td>Exit to Client Details</td>
+                          </tr>
+                        </table>
+                      </md-panel-title>
+                    </md-expansion-panel-header>
+      
+                    <md-action-row>
+                      <button md-button color="warn" (click)="prevStep()">Previous</button>
+                      <button md-button color="primary" (click)="nextStep()">End</button>
+                      <button md-button color="primary" (click)="goBack()">Exit</button>
+                    </md-action-row>
+                  </md-expansion-panel>
+                </md-accordion>
+              </div>
+      
+      
+          </div>
+          <ng-template #elseBlock>Undefined data</ng-template>
+      

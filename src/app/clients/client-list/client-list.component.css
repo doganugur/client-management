@@ -1,0 +1,95 @@
+.left-side-content {
+    border: 0px solid red;
+    overflow: auto;
+    max-width: 200px;
+    height: 100%;
+  }
+  
+  .right-side-content{
+    border: 0px solid #7700FF;
+    overflow: auto;
+    height: 100%;
+  }
+  
+  .grid-list{
+    overflow: auto;
+    height: 100%;
+    /*max-width: 1200px;*/
+  }
+  .grid-tile{
+    overflow: auto;
+  
+    max-height: 200px;
+  }
+  .client-card {
+    width: 60%;
+    height: 100%;
+   
+    align-items: center; 
+    text-align: center;
+    display: inline-block;
+  
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    
+  }
+  .center {
+    text-align: center;
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  
+  .filter {
+    
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px; 
+  }
+  
+  .form-field-full-width {
+  
+    font-family: Arial;
+  
+    font-size: 15px; 
+    margin-bottom: 10%;
+  }
+  
+  .client-card-content {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 75%;
+    width: 100%;
+    align-items: center; 
+    
+  }
+  
+  .client-card-title {
+    text-align: center;
+    width: 90%;
+    height: 10%;
+    margin: auto;
+    font-size: 90%;
+  }
+  
+  
+  
+  .client-card-actions {
+    display: flex;
+    justify-content: center;
+   
+    text-align: center;
+    align-items: center; 
+    width: 100%;
+  }
+  .client-image {
+   
+    width: 80%;
+    height: 50%;
+  }
+  
+  .client-header-image {
+    background-size: cover;
+  }
