@@ -1,6 +1,10 @@
 # ClientManagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+
+## Demo Link
+
+https://doganugur.github.io/client-management/
 
 ## Development server
 
