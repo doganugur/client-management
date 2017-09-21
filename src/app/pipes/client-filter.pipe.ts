@@ -14,6 +14,7 @@ export class ClientFilterPipe implements PipeTransform {
     return value.filter((item: Client) => this.applyFilter(item, firstName, lastName, gender, state ));
   }
 
+  // apply filter rules
   applyFilter(item: Client,  firstName: string, lastName: string, gender: string, state: string): boolean {
      if (firstName && item.name.first.indexOf(firstName) === -1) {
        return false;
