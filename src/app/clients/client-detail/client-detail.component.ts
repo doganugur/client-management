@@ -32,7 +32,7 @@ export class ClientDetailComponent implements OnInit {
   ngOnInit(): void {
     this.client$ = this.route.paramMap
       .switchMap((params: ParamMap) => this.clientService.getClient(params.get('email')));
-
+    // location.reload();
 
     //  this.route.paramMap.subscribe(
     //     params => this.email = params.get('email')

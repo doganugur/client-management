@@ -19,6 +19,6 @@ export class Client {
   nat: string;
 }
 export class ClientFilterFields {
-
   firstName: string;
+  lastName: string;
 }

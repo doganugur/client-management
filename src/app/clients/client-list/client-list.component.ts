@@ -16,12 +16,12 @@ import { ClientService} from './../../services/client.service';
   templateUrl: './client-list.component.html',
   styleUrls: ['./client-list.component.css'],
   encapsulation: ViewEncapsulation.None,
-  providers: [ClientService]
+  providers: [ClientService],
 })
 
 export class ClientListComponent implements OnInit {
-
-  filter: ClientFilterFields = new ClientFilterFields();
+  firstName: string;
+  myFilter: ClientFilterFields = new ClientFilterFields();
   constructor(
     private service: ClientService,
     private route: ActivatedRoute,
@@ -49,6 +49,7 @@ export class ClientListComponent implements OnInit {
     // console.log(client);
     const path = '/details/:';
      this.router.navigateByUrl(path.concat(client.email));
+     location.reload();
 
   }
 }

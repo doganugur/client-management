@@ -13,10 +13,20 @@
       <p class="filter">Filtering</p>
 
       <div>
-        <input class="form-field-full-width" mdInput placeholder="First Name" [(ngModel)]="filter.firstName" value="">
+        <input class="form-field-full-width" mdInput placeholder="First Name" [(ngModel)]="firstName" value="">
       </div>
-      
-
+      <div>
+        <input class="form-field-full-width" mdInput placeholder="Last Name" [(ngModel)]="lastName" value="">
+      </div>
+      <div class="form-field-full-width">
+        <md-radio-group [(ngModel)]="gender" >
+          <md-radio-button value="female">Female</md-radio-button>
+          <md-radio-button value="male">Male</md-radio-button>
+        </md-radio-group>
+      </div>
+      <div>
+        <input class="form-field-full-width" mdInput placeholder="State" [(ngModel)]="state" value="">
+      </div>
     </div>
   </md-sidenav>
   <table>
@@ -28,7 +38,7 @@
   </table>
   <div class="right-side-content">
     <md-grid-list class="grid-list" cols="4">
-      <md-grid-tile class="grid-tile" *ngFor="let client of clients" [colspan]="1" [rowspan]="1" [style.background]="lightblue">
+      <md-grid-tile class="grid-tile" *ngFor="let client of clients | clientFilter: firstName:lastName:gender:state " [colspan]="1" [rowspan]="1" [style.background]="lightblue">
         <div class="client-card">
 
           <div class="client-card-title capitalize">{{client.name.first}} {{client.name.last}}</div>
