@@ -18,7 +18,3 @@ export class Client {
   picture: Cpicture;
   nat: string;
 }
-export class ClientFilterFields {
-  firstName: string;
-  lastName: string;
-}

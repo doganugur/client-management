@@ -7,7 +7,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
-import { Client, ClientFilterFields} from './../../models/client';
+import { Client} from './../../models/client';
 import { ClientService} from './../../services/client.service';
 
 
@@ -21,7 +21,9 @@ import { ClientService} from './../../services/client.service';
 
 export class ClientListComponent implements OnInit {
   firstName: string;
-  myFilter: ClientFilterFields = new ClientFilterFields();
+  lastName: string;
+  gender: string;
+  state: string;
   constructor(
     private service: ClientService,
     private route: ActivatedRoute,
